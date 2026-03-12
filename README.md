@@ -135,7 +135,7 @@ cp -r CLI-Anything/cli-anything-plugin ~/.claude/plugins/cli-anything
 </details>
 
 <details>
-<summary><h4 id="-opencode">⚡ OpenCode</h4></summary>
+<summary><h4 id="-opencode">⚡ OpenCode (Experimental)</h4></summary>
 
 **Step 1: Install the Commands**
 
