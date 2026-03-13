@@ -1,0 +1,537 @@
+# Instincts generated from https://github.com/skalingclouds/CLI-Anything
+# Generated: 2026-03-13T09:35:05.717Z
+# Version: 2.0
+
+---
+id: CLI-Anything-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 50 chars
+- Based on 56 commits
+
+---
+id: CLI-Anything-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: CLI-Anything-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: CLI-Anything-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CLI-Anything-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~16x per month
+- Files: **/*.test.*
+
+---
+id: CLI-Anything-workflow-add-new-harness
+trigger: "when doing add new harness"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Workflow Add New Harness
+
+## Action
+
+Follow the add-new-harness workflow:
+1. Create new tool directory (e.g., zoom/, drawio/, anygen/)
+2. Add agent-harness/cli_anything/{tool}/ package structure
+3. Implement core modules (__init__.py, core/, utils/, tests/)
+4. Create CLI entry point ({tool}_cli.py)
+5. Add setup.py with dependencies
+6. Create documentation (README.md, {TOOL}.md)
+7. Add tests (test_core.py, test_full_e2e.py)
+8. Update main README.md and README_CN.md
+9. Update .gitignore
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: {tool}/agent-harness/cli_anything/{tool}/__init__.py, {tool}/agent-harness/cli_anything/{tool}/core/__init__.py, {tool}/agent-harness/cli_anything/{tool}/utils/__init__.py
+
+---
+id: CLI-Anything-workflow-fix-setup-py-metadata
+trigger: "when doing fix setup py metadata"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Workflow Fix Setup Py Metadata
+
+## Action
+
+Follow the fix-setup-py-metadata workflow:
+1. Identify setup.py files with placeholder URLs
+2. Replace 'yourusername' with 'HKUDS'
+3. Update repository name to 'CLI-Anything'
+4. Fix any other metadata inconsistencies
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: {tool}/agent-harness/setup.py
+
+---
+id: CLI-Anything-workflow-update-readme-documentation
+trigger: "when doing update readme documentation"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Workflow Update Readme Documentation
+
+## Action
+
+Follow the update-readme-documentation workflow:
+1. Update README.md with new content
+2. Update README_CN.md with corresponding Chinese translation
+3. Ensure consistent formatting and structure
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: README.md, README_CN.md
+
+---
+id: CLI-Anything-workflow-add-platform-integration
+trigger: "when doing add platform integration"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Workflow Add Platform Integration
+
+## Action
+
+Follow the add-platform-integration workflow:
+1. Create platform-specific directory (e.g., codex-skill/, qoder-plugin/)
+2. Add installation scripts (install.sh, install.ps1, setup scripts)
+3. Create platform documentation (SKILL.md, README.md)
+4. Update main README files with platform section
+5. Update .gitignore to track new directory
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: {platform}/scripts/install.sh, {platform}/scripts/install.ps1, {platform}/SKILL.md
+
+---
+id: CLI-Anything-workflow-iterative-script-refinement
+trigger: "when doing iterative script refinement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/CLI-Anything
+---
+
+# CLI Anything Workflow Iterative Script Refinement
+
+## Action
+
+Follow the iterative-script-refinement workflow:
+1. Initial script implementation
+2. Address code review feedback (error handling, validation)
+3. Improve robustness (backup, temp file handling, JSON validation)
+4. Add platform-specific improvements
+5. Final cleanup and documentation updates
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: {platform}/setup-{tool}.sh, {platform}/scripts/install.sh, {platform}/scripts/install.ps1
+
+---
+id: cli-anything-snake-case-files
+trigger: "When creating new Python files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Snake Case Files
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- All Python files follow snake_case pattern
+- Consistent across all tool directories
+
+---
+id: cli-anything-camel-case-functions
+trigger: "When defining functions in Python code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Camel Case Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Function naming pattern observed in codeStyle analysis
+
+---
+id: cli-anything-pascal-case-classes
+trigger: "When defining classes in Python code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Pascal Case Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Class naming pattern observed in codeStyle analysis
+
+---
+id: cli-anything-screaming-snake-constants
+trigger: "When defining constants in Python code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Constant naming pattern observed in codeStyle analysis
+
+---
+id: cli-anything-test-structure
+trigger: "When creating tests for a new harness"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Test Structure
+
+## Action
+
+Create test_core.py and test_full_e2e.py in tests/ directory
+
+## Evidence
+
+- add-new-harness workflow shows consistent test file patterns
+- Tests located in separate directory structure
+
+---
+id: cli-anything-conventional-commits
+trigger: "When making commits"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Conventional Commits
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix, docs, refactor
+
+## Evidence
+
+- feat(codex-skill): add windows install script
+- fix: add community contribution label
+- docs: mark Codex integration as experimental
+- refactor: move Qodercli setup script
+
+---
+id: cli-anything-commit-length
+trigger: "When writing commit messages"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Commit Length
+
+## Action
+
+Keep commit messages around 50 characters average
+
+## Evidence
+
+- Average commit length observed at 50 characters in analysis
+
+---
+id: cli-anything-new-harness-directory
+trigger: "When integrating a new application or service"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything New Harness Directory
+
+## Action
+
+Create {tool}/agent-harness/cli_anything/{tool}/ directory structure
+
+## Evidence
+
+- add-new-harness workflow shows this pattern 3x
+- Consistent across zoom/, drawio/, anygen/ examples
+
+---
+id: cli-anything-harness-init-files
+trigger: "When creating new harness package structure"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Harness Init Files
+
+## Action
+
+Add __init__.py files to core/, utils/, tests/ subdirectories
+
+## Evidence
+
+- add-new-harness workflow specifies this pattern
+- Required for Python package structure
+
+---
+id: cli-anything-cli-entry-point
+trigger: "When creating new tool harness"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Cli Entry Point
+
+## Action
+
+Create {tool}_cli.py as the CLI entry point
+
+## Evidence
+
+- add-new-harness workflow shows this pattern
+- Consistent naming convention across tools
+
+---
+id: cli-anything-setup-py-metadata
+trigger: "When setup.py has placeholder URLs or incorrect metadata"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Setup Py Metadata
+
+## Action
+
+Replace 'yourusername' with 'HKUDS' and update repository name to 'CLI-Anything'
+
+## Evidence
+
+- fix-setup-py-metadata workflow occurred 2x
+- fix: replace remaining placeholder URLs in zoom and drawio setup.py
+
+---
+id: cli-anything-dual-readme-update
+trigger: "When updating documentation"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Dual Readme Update
+
+## Action
+
+Update both README.md and README_CN.md with consistent content
+
+## Evidence
+
+- update-readme-documentation workflow frequency 8x
+- Both files consistently updated together
+
+---
+id: cli-anything-platform-scripts
+trigger: "When adding support for new development platform"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Platform Scripts
+
+## Action
+
+Create both install.sh and install.ps1 scripts for cross-platform support
+
+## Evidence
+
+- add-platform-integration workflow shows this pattern
+- Windows and Unix script support needed
+
+---
+id: cli-anything-gitignore-update
+trigger: "When adding new directories or harnesses"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Gitignore Update
+
+## Action
+
+Update .gitignore to include new directory patterns
+
+## Evidence
+
+- Multiple workflows show .gitignore updates
+- Consistent pattern across add-new-harness and add-platform-integration
+
+---
+id: cli-anything-iterative-refinement
+trigger: "When receiving code review feedback on scripts"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/CLI-Anything
+---
+
+# Cli Anything Iterative Refinement
+
+## Action
+
+Improve error handling, validation, and robustness in multiple commits
+
+## Evidence
+
+- iterative-script-refinement workflow shows this pattern
+- Multiple improvement commits for scripts
+
